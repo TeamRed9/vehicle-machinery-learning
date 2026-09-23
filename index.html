@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="เว็บไซต์เรียนรู้เครื่องยนต์ดีเซล 4 สูบ 4 จังหวะ เทอร์โบ">
+  <title>เรียนรู้เครื่องยนต์ดีเซล</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans Thai", sans-serif;
+      line-height: 1.7;
+      color: #1f2937;
+      background: #f4f7fb;
+    }
+
+    header {
+      padding: 64px 20px;
+      color: white;
+      text-align: center;
+      background: linear-gradient(135deg, #0b4f8a, #168aad);
+    }
+
+    header h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    header p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      overflow-x: auto;
+      background: #082f49;
+    }
+
+    nav a {
+      flex: 0 0 auto;
+      padding: 8px 14px;
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+    }
+
+    nav a:hover {
+      background: #0e7490;
+    }
+
+    main {
+      width: min(1100px, calc(100% - 32px));
+      margin: 32px auto;
+    }
+
+    section {
+      margin-bottom: 24px;
+      padding: 28px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    }
+
+    h2 {
+      color: #0b4f8a;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 18px;
+      border-left: 5px solid #f59e0b;
+      border-radius: 12px;
+      background: #f8fafc;
+    }
+
+    footer {
+      padding: 24px;
+      color: white;
+      text-align: center;
+      background: #082f49;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>เครื่องยนต์ดีเซล 4 สูบ 4 จังหวะ เทอร์โบ</h1>
+    <p>บทเรียนเกี่ยวกับโครงสร้าง ระบบสนับสนุน และหลักการทำงานของเครื่องยนต์ดีเซล</p>
+  </header>
+
+  <nav>
+    <a href="#overview">ภาพรวม</a>
+    <a href="#mechanism">กลไกหลัก</a>
+    <a href="#systems">ระบบต่าง ๆ</a>
+    <a href="#cycle">วัฏจักร 4 จังหวะ</a>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>ภาพรวมเครื่องยนต์</h2>
+      <p>
+        เครื่องยนต์ชนิดนี้เป็นเครื่องยนต์ดีเซล 4 สูบเรียง
+        ทำงานตามวัฏจักร 4 จังหวะ และใช้เทอร์โบชาร์จเจอร์ช่วยเพิ่มมวลอากาศเข้าสู่กระบอกสูบ
+      </p>
+    </section>
+
+    <section id="mechanism">
+      <h2>กลไกหลัก</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>ลูกสูบ</h3>
+          <p>รับแรงดันจากการเผาไหม้และเคลื่อนที่ขึ้น–ลงภายในกระบอกสูบ</p>
+        </article>
+
+        <article class="card">
+          <h3>ก้านสูบ</h3>
+          <p>ถ่ายทอดแรงระหว่างลูกสูบกับเพลาข้อเหวี่ยง</p>
+        </article>
+
+        <article class="card">
+          <h3>เพลาข้อเหวี่ยง</h3>
+          <p>เปลี่ยนการเคลื่อนที่ขึ้น–ลงของลูกสูบให้เป็นการหมุน</p>
+        </article>
+
+        <article class="card">
+          <h3>กลไกวาล์ว</h3>
+          <p>ควบคุมการเปิดและปิดวาล์วไอดีกับวาล์วไอเสีย</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="systems">
+      <h2>ระบบสนับสนุน</h2>
+      <div class="grid">
+        <article class="card"><h3>ระบบไอดีและเทอร์โบ</h3><p>อัดและส่งอากาศเข้าสู่กระบอกสูบ</p></article>
+        <article class="card"><h3>ระบบไอเสีย</h3><p>ระบายก๊าซเผาไหม้และขับกังหันเทอร์โบ</p></article>
+        <article class="card"><h3>ระบบเชื้อเพลิง</h3><p>กรอง เพิ่มแรงดัน และฉีดน้ำมันดีเซล</p></article>
+        <article class="card"><h3>ระบบหล่อลื่น</h3><p>ลดแรงเสียดทาน ความร้อน และการสึกหรอ</p></article>
+        <article class="card"><h3>ระบบระบายความร้อน</h3><p>รักษาอุณหภูมิการทำงานของเครื่องยนต์</p></article>
+        <article class="card"><h3>ระบบไฟฟ้าและควบคุม</h3><p>สตาร์ต ตรวจวัด และควบคุมเครื่องยนต์</p></article>
+      </div>
+    </section>
+
+    <section id="cycle">
+      <h2>วัฏจักรการทำงาน 4 จังหวะ</h2>
+      <div class="grid">
+        <article class="card"><h3>1. ดูด</h3><p>วาล์วไอดีเปิด ลูกสูบเลื่อนลงและรับอากาศ</p></article>
+        <article class="card"><h3>2. อัด</h3><p>วาล์วปิด ลูกสูบเลื่อนขึ้นเพื่ออัดอากาศ</p></article>
+        <article class="card"><h3>3. กำลัง</h3><p>หัวฉีดพ่นเชื้อเพลิง เกิดการเผาไหม้และผลักลูกสูบลง</p></article>
+        <article class="card"><h3>4. คาย</h3><p>วาล์วไอเสียเปิดและลูกสูบดันก๊าซออก</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    เว็บไซต์บทเรียนเครื่องยนต์ดีเซล 4 สูบ 4 จังหวะ เทอร์โบ
+  </footer>
+</body>
+</html>
