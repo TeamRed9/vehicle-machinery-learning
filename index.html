@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ศูนย์การเรียนรู้ระบบยานยนต์ เครื่องยนต์ รถยนต์ไฟฟ้า รถแทรกเตอร์ และเครื่องจักรกลการเกษตร">
-  <meta name="keywords" content="เครื่องยนต์ดีเซล, เครื่องยนต์ 4 จังหวะ, เทอร์โบ, รถยนต์ไฟฟ้า, รถแทรกเตอร์, เครื่องจักรกล">
-  <meta name="author" content="Vehicle and Machinery Learning Center">
   <meta name="theme-color" content="#0b4f8a">
 
   <title>ศูนย์การเรียนรู้ระบบยานยนต์และเครื่องจักรกล</title>
@@ -16,8 +14,6 @@
       --primary-light: #168aad;
       --primary-dark: #082f49;
       --secondary: #f59e0b;
-      --success: #15803d;
-      --danger: #b91c1c;
       --background: #f3f6fa;
       --surface: #ffffff;
       --surface-alt: #f8fafc;
@@ -38,657 +34,142 @@
       --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 145px;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 145px; }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "Noto Sans Thai", Tahoma, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Thai", Tahoma, sans-serif;
       line-height: 1.7;
       color: var(--text);
       background: var(--background);
-      transition: background 0.2s, color 0.2s;
     }
 
-    button,
-    input {
-      font: inherit;
-    }
-
-    a {
-      color: inherit;
-    }
+    button, input { font: inherit; }
+    a { color: inherit; }
 
     .skip-link {
-      position: absolute;
-      top: -80px;
-      left: 16px;
-      z-index: 9999;
-      padding: 10px 16px;
-      color: #ffffff;
-      background: #000000;
-      border-radius: 8px;
+      position: absolute; top: -80px; left: 16px; z-index: 9999;
+      padding: 10px 16px; color: #fff; background: #000; border-radius: 8px;
     }
-
-    .skip-link:focus {
-      top: 16px;
-    }
+    .skip-link:focus { top: 16px; }
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 72px 20px 62px;
-      color: #ffffff;
-      text-align: center;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.18), transparent 25%),
-        radial-gradient(circle at 85% 25%, rgba(245,158,11,0.3), transparent 22%),
-        linear-gradient(135deg, #082f49, #0b4f8a 55%, #168aad);
+      padding: 72px 20px 62px; color: #fff; text-align: center;
+      background: linear-gradient(135deg, #082f49, #0b4f8a 55%, #168aad);
     }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      width: min(1100px, 100%);
-      margin: auto;
-    }
-
+    .hero-content { width: min(1100px, 100%); margin: auto; }
     .eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 6px 13px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      color: #fff7d6;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 999px;
+      display: inline-block; margin-bottom: 14px; padding: 6px 13px;
+      font-size: 0.9rem; font-weight: 700; color: #fff7d6;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 999px;
     }
-
-    .hero h1 {
-      max-width: 950px;
-      margin: 0 auto 16px;
-      font-size: clamp(2rem, 5vw, 4rem);
-      line-height: 1.2;
-    }
-
-    .hero p {
-      max-width: 850px;
-      margin: 0 auto;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: #e7f5ff;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 10px 18px;
-      font-weight: 700;
-      text-decoration: none;
-      border: 1px solid transparent;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-
-    .button-primary {
-      color: #172033;
-      background: #fbbf24;
-    }
-
-    .button-secondary {
-      color: #ffffff;
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.35);
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
-      filter: brightness(1.05);
-    }
+    .hero h1 { max-width: 950px; margin: 0 auto 16px; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.2; }
+    .hero p { max-width: 850px; margin: 0 auto; font-size: clamp(1rem, 2vw, 1.15rem); color: #e7f5ff; }
 
     .toolbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      padding: 10px 16px;
-      background: var(--primary-dark);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+      position: sticky; top: 0; z-index: 100; padding: 10px 16px;
+      background: var(--primary-dark); box-shadow: 0 4px 16px rgba(0,0,0,0.14);
     }
-
     .toolbar-inner {
-      display: grid;
-      grid-template-columns: minmax(220px, 1fr) auto;
-      gap: 10px;
-      width: min(1300px, 100%);
-      margin: auto;
+      display: grid; grid-template-columns: minmax(220px, 1fr) auto; gap: 10px;
+      width: min(1300px, 100%); margin: auto;
     }
-
-    .search-wrap {
-      position: relative;
-    }
-
+    .search-wrap { position: relative; }
     .search-wrap input {
-      width: 100%;
-      min-height: 44px;
-      padding: 10px 44px 10px 15px;
-      color: #172033;
-      background: #ffffff;
-      border: 1px solid #cbd5e1;
-      border-radius: 12px;
-      outline: none;
+      width: 100%; min-height: 44px; padding: 10px 44px 10px 15px;
+      color: #172033; background: #fff; border: 1px solid #cbd5e1; border-radius: 12px; outline: none;
     }
-
-    .search-wrap input:focus {
-      border-color: #fbbf24;
-      box-shadow: 0 0 0 3px rgba(251,191,36,0.25);
-    }
-
-    .search-icon {
-      position: absolute;
-      top: 9px;
-      right: 14px;
-      font-size: 1.1rem;
-      color: #475569;
-      pointer-events: none;
-    }
-
-    .toolbar-buttons {
-      display: flex;
-      gap: 8px;
-    }
-
+    .search-icon { position: absolute; top: 9px; right: 14px; color: #475569; pointer-events: none; }
+    .toolbar-buttons { display: flex; gap: 8px; }
     .icon-button {
-      min-width: 44px;
-      min-height: 44px;
-      padding: 8px 12px;
-      color: #ffffff;
-      background: #164e63;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 11px;
-      cursor: pointer;
+      min-height: 44px; padding: 8px 14px; color: #fff; background: #164e63;
+      border: 1px solid rgba(255,255,255,0.2); border-radius: 11px; cursor: pointer;
     }
-
-    .icon-button:hover {
-      background: #0e7490;
-    }
+    .icon-button:hover { background: #0e7490; }
 
     .navigation {
-      position: sticky;
-      top: 64px;
-      z-index: 90;
-      display: flex;
-      gap: 8px;
-      padding: 10px 16px;
-      overflow-x: auto;
-      white-space: nowrap;
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      scrollbar-width: thin;
+      position: sticky; top: 64px; z-index: 90; display: flex; gap: 8px;
+      padding: 10px 16px; overflow-x: auto; white-space: nowrap;
+      background: var(--surface); border-bottom: 1px solid var(--border);
     }
-
     .navigation a {
-      flex: 0 0 auto;
-      padding: 8px 13px;
-      font-size: 0.92rem;
-      font-weight: 650;
-      color: var(--primary);
-      text-decoration: none;
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: 999px;
+      padding: 8px 13px; font-size: 0.92rem; font-weight: 650; color: var(--primary);
+      text-decoration: none; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 999px;
     }
+    body.dark .navigation a { color: #7dd3fc; }
+    .navigation a:hover { color: #fff; background: var(--primary); border-color: var(--primary); }
 
-    body.dark .navigation a {
-      color: #7dd3fc;
-    }
-
-    .navigation a:hover,
-    .navigation a:focus {
-      color: #ffffff;
-      background: var(--primary);
-      border-color: var(--primary);
-    }
-
-    .container {
-      width: min(1300px, calc(100% - 32px));
-      margin: 32px auto 70px;
-    }
+    .container { width: min(1300px, calc(100% - 32px)); margin: 32px auto 70px; }
 
     .notice {
-      margin-bottom: 24px;
-      padding: 18px 20px;
-      background: #fff8db;
-      border-left: 5px solid #f59e0b;
-      border-radius: 12px;
+      margin-bottom: 24px; padding: 18px 20px; background: #fff8db;
+      border-left: 5px solid #f59e0b; border-radius: 12px;
     }
+    body.dark .notice { color: #fde68a; background: #422006; }
 
-    body.dark .notice {
-      color: #fde68a;
-      background: #422006;
+    /* ส่วนแสดงรูปภาพอินโฟกราฟิก */
+    .infographic-box {
+      margin-bottom: 28px; padding: 20px; text-align: center;
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
     }
-
-    .notice strong {
-      color: #92400e;
+    .infographic-box img {
+      width: 100%; max-width: 850px; height: auto; border-radius: 12px; border: 1px solid var(--border);
     }
-
-    body.dark .notice strong {
-      color: #fbbf24;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 15px;
-      margin-bottom: 28px;
-    }
-
-    .stat {
-      padding: 22px;
-      text-align: center;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .stat-number {
-      display: block;
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1.2;
-      color: var(--primary);
-    }
-
-    body.dark .stat-number {
-      color: #38bdf8;
-    }
-
-    .stat-label {
-      color: var(--muted);
-    }
-
-    .learning-categories {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 15px;
-      margin-bottom: 30px;
-    }
-
-    .category-card {
-      padding: 20px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-top: 5px solid var(--primary-light);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .category-card.active {
-      border-top-color: var(--secondary);
-    }
-
-    .category-card h3 {
-      margin: 0 0 8px;
-      color: var(--primary);
-    }
-
-    body.dark .category-card h3 {
-      color: #7dd3fc;
-    }
-
-    .category-card p {
-      margin: 0;
-      color: var(--muted);
-    }
+    .infographic-box p { margin: 12px 0 0; color: var(--muted); font-size: 0.95rem; }
 
     .section {
-      margin: 0 0 28px;
-      padding: 28px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      margin: 0 0 28px; padding: 28px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
     }
-
-    .section-heading {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 18px;
-    }
-
-    .section-heading h2 {
-      margin: 0;
-      font-size: clamp(1.45rem, 3vw, 2rem);
-      line-height: 1.3;
-      color: var(--primary);
-    }
-
-    body.dark .section-heading h2 {
-      color: #7dd3fc;
-    }
-
-    .section-heading p {
-      max-width: 850px;
-      margin: 7px 0 0;
-      color: var(--muted);
-    }
+    .section-heading { display: flex; justify-content: space-between; gap: 18px; margin-bottom: 18px; }
+    .section-heading h2 { margin: 0; color: var(--primary); font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
+    body.dark .section-heading h2 { color: #7dd3fc; }
+    .section-heading p { margin: 6px 0 0; color: var(--muted); }
 
     .badge {
-      flex: 0 0 auto;
-      padding: 6px 11px;
-      font-size: 0.84rem;
-      font-weight: 700;
-      color: #075985;
-      background: #e0f2fe;
-      border-radius: 999px;
+      padding: 6px 11px; font-size: 0.84rem; font-weight: 700; color: #075985;
+      background: #e0f2fe; border-radius: 999px; height: fit-content;
     }
-
-    body.dark .badge {
-      color: #bae6fd;
-      background: #0c4a6e;
-    }
+    body.dark .badge { color: #bae6fd; background: #0c4a6e; }
 
     .flow {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      margin: 18px 0;
-      padding: 16px;
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 18px 0;
+      padding: 16px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px;
     }
+    .flow-step { padding: 7px 11px; font-weight: 700; color: var(--primary); background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+    body.dark .flow-step { color: #7dd3fc; }
+    .flow-arrow { color: var(--secondary); font-weight: 900; }
 
-    .flow-step {
-      padding: 7px 11px;
-      font-weight: 700;
-      color: var(--primary);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
+    .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 13px; }
+    table { width: 100%; min-width: 900px; border-collapse: collapse; background: var(--surface); }
+    th, td { padding: 13px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+    th { position: sticky; top: 0; color: #fff; background: var(--primary); }
+    tr:nth-child(even) td { background: var(--surface-alt); }
+    tr:hover td { background: #fff7d6; }
+    body.dark tr:hover td { background: #3f2d0c; }
+    td:first-child { font-weight: 700; }
+
+    .cycle-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; margin-bottom: 22px; }
+    .cycle-card { padding: 20px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 15px; border-top: 5px solid var(--secondary); }
+    .cycle-card h3 { margin: 0 0 8px; color: var(--primary); }
+    body.dark .cycle-card h3 { color: #7dd3fc; }
+    .cycle-card p { margin: 6px 0; }
+
+    .no-results { display: none; padding: 40px; text-align: center; color: var(--muted); background: var(--surface); border-radius: var(--radius); }
+
+    footer { padding: 34px 20px; color: #dbeafe; text-align: center; background: var(--primary-dark); }
+    footer p { max-width: 950px; margin: 7px auto; }
+    .footer-small { font-size: 0.9rem; color: #a5c5e4; }
+
+    @media (max-width: 900px) {
+      .cycle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-
-    body.dark .flow-step {
-      color: #7dd3fc;
-    }
-
-    .flow-arrow {
-      color: var(--secondary);
-      font-weight: 900;
-    }
-
-    .table-wrap {
-      width: 100%;
-      overflow-x: auto;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-    }
-
-    table {
-      width: 100%;
-      min-width: 900px;
-      border-collapse: collapse;
-      background: var(--surface);
-    }
-
-    th,
-    td {
-      padding: 13px 14px;
-      text-align: left;
-      vertical-align: top;
-      border-bottom: 1px solid var(--border);
-    }
-
-    th {
-      position: sticky;
-      top: 0;
-      z-index: 1;
-      color: #ffffff;
-      background: var(--primary);
-    }
-
-    tr:nth-child(even) td {
-      background: var(--surface-alt);
-    }
-
-    tr:hover td {
-      background: #fff7d6;
-    }
-
-    body.dark tr:hover td {
-      background: #3f2d0c;
-    }
-
-    td:first-child {
-      font-weight: 700;
-    }
-
-    .cycle-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 15px;
-      margin-bottom: 22px;
-    }
-
-    .cycle-card {
-      position: relative;
-      overflow: hidden;
-      padding: 20px;
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-    }
-
-    .cycle-card::before {
-      content: "";
-      display: block;
-      width: 42px;
-      height: 5px;
-      margin-bottom: 15px;
-      background: var(--secondary);
-      border-radius: 999px;
-    }
-
-    .cycle-card h3 {
-      margin: 0 0 8px;
-      color: var(--primary);
-    }
-
-    body.dark .cycle-card h3 {
-      color: #7dd3fc;
-    }
-
-    .cycle-card p {
-      margin: 6px 0;
-    }
-
-    .cycle-card strong {
-      color: var(--text);
-    }
-
-    .no-results {
-      display: none;
-      padding: 40px 20px;
-      text-align: center;
-      color: var(--muted);
-      background: var(--surface);
-      border: 1px dashed var(--border);
-      border-radius: var(--radius);
-    }
-
-    .highlight {
-      background: #fde68a;
-      color: #422006;
-      border-radius: 3px;
-    }
-
-    .back-to-top {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 200;
-      display: none;
-      width: 48px;
-      height: 48px;
-      color: #ffffff;
-      background: var(--primary);
-      border: none;
-      border-radius: 50%;
-      box-shadow: var(--shadow);
-      cursor: pointer;
-    }
-
-    footer {
-      padding: 34px 20px;
-      color: #dbeafe;
-      text-align: center;
-      background: var(--primary-dark);
-    }
-
-    footer p {
-      max-width: 950px;
-      margin: 7px auto;
-    }
-
-    .footer-small {
-      font-size: 0.9rem;
-      color: #a5c5e4;
-    }
-
-    @media (max-width: 1000px) {
-      .stats,
-      .learning-categories,
-      .cycle-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 700px) {
-      html {
-        scroll-padding-top: 190px;
-      }
-
-      .hero {
-        padding: 54px 18px 48px;
-      }
-
-      .toolbar-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .toolbar-buttons {
-        justify-content: stretch;
-      }
-
-      .toolbar-buttons button {
-        flex: 1;
-      }
-
-      .navigation {
-        top: 108px;
-      }
-
-      .container {
-        width: min(100% - 20px, 1300px);
-        margin-top: 20px;
-      }
-
-      .section {
-        padding: 20px 15px;
-      }
-
-      .section-heading {
-        display: block;
-      }
-
-      .badge {
-        display: inline-block;
-        margin-top: 10px;
-      }
-
-      .stats,
-      .learning-categories,
-      .cycle-grid {
-        grid-template-columns: 1fr;
-      }
-
-      table {
-        min-width: 760px;
-        font-size: 0.92rem;
-      }
-    }
-
-    @media print {
-      .toolbar,
-      .navigation,
-      .hero-actions,
-      .back-to-top,
-      .skip-link {
-        display: none !important;
-      }
-
-      body {
-        color: #000000;
-        background: #ffffff;
-      }
-
-      .hero {
-        padding: 20px;
-        color: #000000;
-        background: #ffffff;
-        border-bottom: 2px solid #000000;
-      }
-
-      .hero p,
-      .eyebrow {
-        color: #000000;
-      }
-
-      .container {
-        width: 100%;
-        margin: 0;
-      }
-
-      .section {
-        break-inside: avoid;
-        box-shadow: none;
-        border: 1px solid #999999;
-      }
-
-      .table-wrap {
-        overflow: visible;
-      }
-
-      table {
-        min-width: 0;
-        font-size: 9pt;
-      }
-
-      th {
-        color: #000000;
-        background: #dddddd;
-      }
+    @media (max-width: 600px) {
+      .cycle-grid { grid-template-columns: 1fr; }
+      .toolbar-inner { grid-template-columns: 1fr; }
+      .toolbar-buttons { justify-content: space-between; }
+      .toolbar-buttons button { flex: 1; }
     }
   </style>
 </head>
@@ -700,17 +181,7 @@
     <div class="hero-content">
       <span class="eyebrow">Vehicle & Machinery Learning Center</span>
       <h1>ศูนย์การเรียนรู้ระบบยานยนต์และเครื่องจักรกล</h1>
-      <p>
-        แหล่งเรียนรู้เกี่ยวกับรถยนต์ไฟฟ้า รถยนต์เครื่องยนต์สันดาป
-        รถแทรกเตอร์ และเครื่องจักรกลการเกษตร
-        โดยบทเรียนปัจจุบันครอบคลุมเครื่องยนต์ดีเซล 4 สูบ 4 จังหวะ
-        แบบเทอร์โบชาร์จอย่างเป็นระบบ
-      </p>
-
-      <div class="hero-actions">
-        <a class="button button-primary" href="#overview">เริ่มเรียนบทเรียน</a>
-        <a class="button button-secondary" href="#four-stroke">ดูวัฏจักร 4 จังหวะ</a>
-      </div>
+      <p>คลังความรู้ระบบยานยนต์ เครื่องยนต์ รถยนต์ไฟฟ้า รถแทรกเตอร์ และเครื่องจักรกลการเกษตร (ข้อมูลพื้นฐานจากเครื่องยนต์ดีเซล 4 สูบ 4 จังหวะ เทอร์โบ)</p>
     </div>
   </header>
 
@@ -718,24 +189,18 @@
     <div class="toolbar-inner">
       <div class="search-wrap">
         <label for="searchInput" class="skip-link">ค้นหาเนื้อหา</label>
-        <input
-          id="searchInput"
-          type="search"
-          placeholder="ค้นหา เช่น เทอร์โบ หัวฉีด ควันดำ แรงดันต่ำ..."
-          autocomplete="off"
-        >
+        <input id="searchInput" type="search" placeholder="ค้นหา เช่น เทอร์โบ หัวฉีด ควันดำ แรงดันต่ำ..." autocomplete="off">
         <span class="search-icon" aria-hidden="true">⌕</span>
       </div>
-
       <div class="toolbar-buttons">
-        <button id="clearSearch" class="icon-button" type="button">ล้างการค้นหา</button>
-        <button id="printButton" class="icon-button" type="button">พิมพ์</button>
+        <button id="clearSearch" class="icon-button" type="button">ล้างคำค้น</button>
         <button id="themeButton" class="icon-button" type="button">โหมดมืด</button>
       </div>
     </div>
   </div>
 
   <nav class="navigation" aria-label="เมนูบทเรียน">
+    <a href="#infographic">ภาพอินโฟกราฟิก</a>
     <a href="#overview">ภาพรวม</a>
     <a href="#positions">ตำแหน่งในภาพ</a>
     <a href="#mechanism">กลไกหลัก</a>
@@ -750,84 +215,23 @@
 
   <main id="main-content" class="container">
     <aside class="notice">
-      <strong>ข้อควรทราบ:</strong>
-      เนื้อหานี้จัดทำเพื่อการศึกษาและอธิบายหลักการทั่วไป
-      ไม่ใช่คู่มือซ่อมของเครื่องยนต์รุ่นใดรุ่นหนึ่ง
-      ก่อนตรวจซ่อมต้องปิดเครื่องยนต์ ตัดแหล่งพลังงาน
-      ปลดแรงดัน และปฏิบัติตามคู่มือของผู้ผลิต
+      <strong>ข้อควรทราบ:</strong> เนื้อหานี้จัดทำเพื่อการศึกษาและอธิบายหลักการทั่วไป ไม่ใช่คู่มือซ่อมของเครื่องยนต์รุ่นใดรุ่นหนึ่ง
     </aside>
 
-    <section class="stats" aria-label="สถิติเนื้อหา">
-      <div class="stat">
-        <span class="stat-number">10</span>
-        <span class="stat-label">หมวดบทเรียน</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">141</span>
-        <span class="stat-label">รายการความรู้</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">4</span>
-        <span class="stat-label">จังหวะการทำงาน</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">720°</span>
-        <span class="stat-label">หนึ่งวัฏจักรสมบูรณ์</span>
-      </div>
+    <!-- ส่วนแสดงรูปอินโฟกราฟิกต้นฉบับ -->
+    <section id="infographic" class="infographic-box">
+      <h2>อินโฟกราฟิกโครงสร้างเครื่องยนต์</h2>
+      <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1200&q=80" alt="โครงสร้างเครื่องยนต์ดีเซล" loading="lazy">
+      <p>ภาพประกอบโครงสร้างกลไกหลักและระบบสนับสนุนทั้ง 6 ระบบของเครื่องยนต์ดีเซล 4 จังหวะ เทอร์โบ</p>
     </section>
 
-    <section aria-labelledby="category-title">
-      <div class="section-heading">
-        <div>
-          <h2 id="category-title">หมวดการเรียนรู้ของเว็บไซต์</h2>
-          <p>โครงสร้างเว็บไซต์รองรับการเพิ่มบทเรียนประเภทอื่นในอนาคต</p>
-        </div>
-      </div>
-
-      <div class="learning-categories">
-        <article class="category-card">
-          <h3>รถยนต์ไฟฟ้า</h3>
-          <p>แบตเตอรี่แรงดันสูง มอเตอร์ อินเวอร์เตอร์ ระบบชาร์จ และระบบควบคุม</p>
-        </article>
-
-        <article class="category-card active">
-          <h3>เครื่องยนต์สันดาป</h3>
-          <p>เครื่องยนต์ดีเซลและเบนซิน ระบบเชื้อเพลิง ไอดี ไอเสีย และระบบส่งกำลัง</p>
-        </article>
-
-        <article class="category-card">
-          <h3>รถแทรกเตอร์</h3>
-          <p>เครื่องยนต์ ระบบส่งกำลัง ไฮดรอลิก PTO ระบบบังคับเลี้ยว และการบำรุงรักษา</p>
-        </article>
-
-        <article class="category-card">
-          <h3>เครื่องจักรกลการเกษตร</h3>
-          <p>รถเกี่ยวข้าว รถดำนา รถขุด อุปกรณ์ต่อพ่วง และหลักการวิเคราะห์ปัญหา</p>
-        </article>
-      </div>
-    </section>
-
-    <div id="noResults" class="no-results">
-      ไม่พบข้อมูลที่ตรงกับคำค้นหา กรุณาลองใช้คำอื่น เช่น “หัวฉีด” “ควันดำ” หรือ “เทอร์โบ”
-    </div>
-
+    <div id="noResults" class="no-results">ไม่พบข้อมูลที่ตรงกับคำค้นหา กรุณาลองใช้คำอื่น</div>
     <div id="contentSections"></div>
   </main>
 
-  <button id="backToTop" class="back-to-top" type="button" aria-label="กลับขึ้นด้านบน">
-    ↑
-  </button>
-
   <footer>
     <p><strong>ศูนย์การเรียนรู้ระบบยานยนต์และเครื่องจักรกล</strong></p>
-    <p>
-      เนื้อหาสำหรับการศึกษาเกี่ยวกับระบบยานยนต์ เครื่องยนต์
-      รถแทรกเตอร์ และเครื่องจักรกลการเกษตร
-    </p>
-    <p class="footer-small">
-      เว็บไซต์นี้จัดทำขึ้นเพื่อการศึกษาโดยอิสระ มิใช่เว็บไซต์อย่างเป็นทางการของผู้ผลิต
-      ชื่อทางการค้าและเครื่องหมายการค้าเป็นกรรมสิทธิ์ของเจ้าของแต่ละราย
-    </p>
+    <p class="footer-small">จัดทำขึ้นเพื่อการศึกษาโดยอิสระ มิใช่เว็บไซต์อย่างเป็นทางการของผู้ผลิต</p>
   </footer>
 
   <script>
@@ -837,575 +241,210 @@
       {
         id: "overview",
         title: "1. ภาพรวมเครื่องยนต์",
-        description:
-          "ข้อมูลพื้นฐานของเครื่องยนต์ดีเซล 4 สูบเรียง 4 จังหวะ แบบเทอร์โบชาร์จ",
+        description: "ข้อมูลพื้นฐานของเครื่องยนต์ดีเซล 4 สูบเรียง 4 จังหวะ แบบเทอร์โบชาร์จ",
         headers: ["หัวข้อ", "รายละเอียด"],
         rows: [
-          ["ประเภทเครื่องยนต์ในภาพ", "เครื่องยนต์ดีเซล 4 จังหวะ แบบ 4 สูบเรียง พร้อมเทอร์โบชาร์จเจอร์"],
+          ["ประเภทเครื่องยนต์", "เครื่องยนต์ดีเซล 4 จังหวะ แบบ 4 สูบเรียง พร้อมเทอร์โบชาร์จเจอร์"],
           ["การใช้งานตัวอย่าง", "เครื่องกำเนิดไฟฟ้าดีเซล เครื่องจักรก่อสร้าง และยานพาหนะดีเซล"],
-          ["หลักการจุดระเบิด", "จุดระเบิดด้วยความร้อนจากการอัดอากาศ ไม่ใช้หัวเทียนจุดระเบิดแบบเครื่องยนต์เบนซิน"],
-          ["วัฏจักรการทำงาน", "ดูด อัด กำลัง และคาย"],
-          ["จำนวนรอบเพลาข้อเหวี่ยงต่อหนึ่งวัฏจักร", "2 รอบ หรือ 720°"],
-          ["จำนวนจังหวะกำลังต่อสูบต่อหนึ่งวัฏจักร", "1 ครั้ง"],
+          ["หลักการจุดระเบิด", "จุดระเบิดด้วยความร้อนจากการอัดอากาศ ไม่ใช้หัวเทียน"],
+          ["วัฏจักรการทำงาน", "ดูด อัด กำลัง และคาย (2 รอบเพลาข้อเหวี่ยง / 720°)"],
           ["โครงสร้างหลัก", "กลไกลูกสูบ–ก้านสูบ–เพลาข้อเหวี่ยง และกลไกควบคุมวาล์ว"],
-          ["ระบบสนับสนุนตามภาพ", "ระบบไอดี ระบบไอเสีย ระบบเชื้อเพลิง ระบบหล่อลื่น ระบบระบายความร้อน และระบบสตาร์ตกับควบคุมไฟฟ้า"],
-          ["หน้าที่ของเทอร์โบ", "ใช้พลังงานของก๊าซไอเสียหมุนกังหันและคอมเพรสเซอร์ เพื่อเพิ่มมวลอากาศเข้าสู่กระบอกสูบ"],
-          ["ข้อจำกัดของภาพ", "เป็นอินโฟกราฟิกเพื่อการศึกษา ไม่ใช่แบบประกอบทางวิศวกรรมของเครื่องยนต์รุ่นเฉพาะ ตำแหน่งและสัดส่วนบางส่วนอาจถูกปรับเพื่อให้เข้าใจง่าย"]
+          ["ระบบสนับสนุน", "ระบบไอดี ไอเสีย เชื้อเพลิง หล่อลื่น ระบายความร้อน และระบบไฟฟ้า"]
         ]
       },
       {
         id: "positions",
         title: "2. ตำแหน่งระบบและชิ้นส่วนในภาพ",
-        description:
-          "คำอธิบายหมายเลข 1–8 และชิ้นส่วนสำคัญที่มองเห็นจากภาพตัดเครื่องยนต์",
-        headers: [
-          "หมายเลข",
-          "ระบบหรือกลไก",
-          "ตำแหน่งในอินโฟกราฟิก",
-          "จุดที่ลูกศรชี้หรือบริเวณสำคัญ",
-          "หน้าที่โดยสรุป"
-        ],
+        description: "คำอธิบายหมายเลข 1–8 และชิ้นส่วนสำคัญจากภาพตัดเครื่องยนต์",
+        headers: ["หมายเลข", "ระบบหรือกลไก", "ตำแหน่งในภาพ", "หน้าที่โดยสรุป"],
         rows: [
-          ["1", "กลไกลูกสูบ–ก้านสูบ–เพลาข้อเหวี่ยง", "กรอบสีน้ำเงินด้านซ้ายบนและส่วนตัดกลางเครื่อง", "ลูกสูบ ก้านสูบ และเพลาข้อเหวี่ยง", "เปลี่ยนการเคลื่อนที่ขึ้นลงของลูกสูบเป็นแรงหมุน"],
-          ["2", "กลไกควบคุมวาล์ว", "กรอบสีเขียวด้านซ้ายกลางและด้านบนฝาสูบ", "เพลาลูกเบี้ยว สปริง และวาล์ว", "เปิดและปิดวาล์วไอดีกับวาล์วไอเสียตามจังหวะ"],
-          ["3", "ระบบไอดี", "กรอบสีน้ำเงินด้านขวาบน", "ฝั่งคอมเพรสเซอร์ของเทอร์โบและทางอากาศเข้า", "กรอง อัด และส่งอากาศเข้ากระบอกสูบ"],
-          ["4", "ระบบไอเสีย", "กรอบสีส้มด้านขวากลาง", "ฝั่งกังหันเทอร์โบและท่อไอเสีย", "ระบายก๊าซเผาไหม้และขับกังหันเทอร์โบ"],
-          ["5", "ระบบเชื้อเพลิง", "กรอบสีเหลืองด้านซ้ายกลางล่าง", "ปั๊ม ท่อจ่าย กรอง และหัวฉีด", "กรอง เพิ่มแรงดัน และฉีดน้ำมันดีเซล"],
-          ["6", "ระบบหล่อลื่น", "กรอบสีเหลืองด้านซ้ายล่าง", "อ่างน้ำมันและทางเดินน้ำมันใต้เครื่อง", "ลดแรงเสียดทาน ระบายความร้อน และชะล้างสิ่งปนเปื้อน"],
-          ["7", "ระบบระบายความร้อน", "กรอบสีฟ้าด้านขวาล่าง", "ทางเดินน้ำรอบเสื้อสูบ หม้อน้ำ และถังพัก", "รักษาอุณหภูมิการทำงานให้เหมาะสม"],
-          ["8", "ระบบสตาร์ตและควบคุมไฟฟ้า", "กรอบสีม่วงด้านขวาล่าง", "มอเตอร์สตาร์ต แบตเตอรี่ และวงจรควบคุม", "หมุนเครื่องยนต์ช่วงเริ่มต้น จ่ายไฟ ควบคุม และตรวจติดตาม"],
-          ["-", "ฝาครอบวาล์ว", "บนสุดของเครื่องยนต์", "ฝาครอบยาวเหนือฝาสูบ", "ปิดชุดวาล์วและป้องกันน้ำมันรั่วกับสิ่งสกปรก"],
-          ["-", "ฝาสูบ", "ส่วนบนเหนือกระบอกสูบ", "บริเวณวาล์ว หัวฉีด และห้องเผาไหม้", "ปิดด้านบนกระบอกสูบและรองรับอุปกรณ์ควบคุมการเผาไหม้"],
-          ["-", "เสื้อสูบ", "โครงหลักตรงกลาง", "โครงรอบกระบอกสูบ", "รองรับกระบอกสูบ เพลาข้อเหวี่ยง และทางเดินของไหล"],
-          ["-", "พัดลมระบายความร้อน", "ด้านหน้าซ้ายของเครื่อง", "ใบพัดสีอ่อนขนาดใหญ่", "สร้างการไหลของอากาศผ่านหม้อน้ำ"],
-          ["-", "ไดชาร์จ", "ด้านหน้าซ้ายหลังพัดลม", "อุปกรณ์มีพูลเลย์และสายพาน", "ผลิตไฟฟ้าและชาร์จแบตเตอรี่"],
-          ["-", "กรองน้ำมันเครื่อง", "ด้านล่างขวาของเครื่อง", "กระบอกสีน้ำเงิน", "กรองเขม่า เศษโลหะ และสิ่งปนเปื้อนจากน้ำมันเครื่อง"],
-          ["-", "อ่างน้ำมันเครื่อง", "ล่างสุดของเครื่องยนต์", "ถาดรองใต้เพลาข้อเหวี่ยง", "เก็บน้ำมันเครื่องก่อนถูกปั๊มกลับเข้าสู่ระบบ"]
+          ["1", "กลไกลูกสูบ–ก้านสูบ–เพลาข้อเหวี่ยง", "กรอบสีน้ำเงินด้านซ้ายบน", "เปลี่ยนการเคลื่อนที่ขึ้นลงเป็นแรงหมุน"],
+          ["2", "กลไกควบคุมวาล์ว", "กรอบสีเขียวด้านซ้ายกลาง", "เปิด–ปิดวาล์วไอดีและไอเสียตามจังหวะ"],
+          ["3", "ระบบไอดี", "กรอบสีน้ำเงินด้านขวาบน", "กรอง อัด และส่งอากาศเข้ากระบอกสูบ"],
+          ["4", "ระบบไอเสีย", "กรอบสีส้มด้านขวากลาง", "ระบายก๊าซเผาไหม้และขับกังหันเทอร์โบ"],
+          ["5", "ระบบเชื้อเพลิง", "กรอบสีเหลืองด้านซ้ายล่าง", "กรอง เพิ่มแรงดัน และฉีดน้ำมันดีเซล"],
+          ["6", "ระบบหล่อลื่น", "กรอบสีเหลืองด้านล่างซ้าย", "ลดแรงเสียดทาน ระบายความร้อน และชะล้างสิ่งสกปรก"],
+          ["7", "ระบบระบายความร้อน", "กรอบสีฟ้าด้านขวาล่าง", "รักษาอุณหภูมิการทำงานของเครื่องยนต์ให้เหมาะสม"],
+          ["8", "ระบบสตาร์ตและควบคุมไฟฟ้า", "กรอบสีม่วงด้านขวาล่าง", "จ่ายไฟ สตาร์ต และควบคุมระบบอิเล็กทรอนิกส์"]
         ]
       },
       {
         id: "mechanism",
         title: "3. กลไกหลักของเครื่องยนต์",
-        description:
-          "กลไกลูกสูบ ชุดเพลาข้อเหวี่ยง และกลไกควบคุมวาล์วซึ่งทำหน้าที่เปลี่ยนพลังงานความร้อนเป็นพลังงานกล",
-        headers: [
-          "กลุ่ม",
-          "ชิ้นส่วน",
-          "ตำแหน่งหรือความสัมพันธ์",
-          "หน้าที่",
-          "อาการเมื่อผิดปกติที่พบบ่อย"
-        ],
+        description: "ชิ้นส่วนภายในที่ทำหน้าที่รับแรงและเปลี่ยนพลังงานความร้อนเป็นพลังงานกล",
+        headers: ["กลุ่ม", "ชิ้นส่วน", "หน้าที่หลัก", "อาการเมื่อผิดปกติ"],
         rows: [
-          ["กลไกลูกสูบ", "กระบอกสูบ", "ภายในเสื้อสูบ เป็นแนวให้ลูกสูบเคลื่อนที่", "รักษาแนวลูกสูบและกักความดันการเผาไหม้", "กำลังอัดต่ำ กินน้ำมันเครื่อง ควันผิดปกติ"],
-          ["กลไกลูกสูบ", "ลูกสูบ", "เคลื่อนขึ้นลงภายในกระบอกสูบ", "รับแรงดันจากก๊าซเผาไหม้และถ่ายทอดแรงสู่ก้านสูบ", "เสียงเคาะ กำลังตก ลูกสูบติดหรือเสียหาย"],
-          ["กลไกลูกสูบ", "หัวลูกสูบ", "ด้านบนของลูกสูบติดกับห้องเผาไหม้", "รับความร้อนและความดันสูง อาจมีรูปทรงช่วยการผสมอากาศกับเชื้อเพลิง", "รอยไหม้ ร้าว หรือหลอมจากอุณหภูมิสูงผิดปกติ"],
-          ["กลไกลูกสูบ", "แหวนอัด", "ร่องรอบลูกสูบส่วนบน", "ลดการรั่วของก๊าซจากห้องเผาไหม้ลงสู่อ่างข้อเหวี่ยง", "กำลังอัดต่ำ ควันจากช่องระบายไอเครื่องมาก"],
-          ["กลไกลูกสูบ", "แหวนน้ำมัน", "ร่องรอบลูกสูบส่วนล่าง", "ควบคุมฟิล์มน้ำมันบนผนังกระบอกสูบ", "กินน้ำมันเครื่องและควันสีน้ำเงิน"],
-          ["กลไกลูกสูบ", "สลักลูกสูบ", "เชื่อมลูกสูบกับปลายเล็กของก้านสูบ", "เป็นจุดหมุนและถ่ายทอดแรง", "เสียงเคาะบริเวณลูกสูบและระยะคลอนสูง"],
-          ["กลไกลูกสูบ", "ก้านสูบ", "ระหว่างลูกสูบกับเพลาข้อเหวี่ยง", "ถ่ายทอดแรงและเปลี่ยนรูปแบบการเคลื่อนที่ร่วมกับเพลาข้อเหวี่ยง", "ก้านคด แบริ่งสึก หรือเสียงเคาะหนัก"],
-          ["กลไกลูกสูบ", "แบริ่งก้านสูบ", "ระหว่างปลายใหญ่ก้านสูบกับข้อเพลา", "ลดแรงเสียดทานและรองรับแรงสลับ", "แรงดันน้ำมันต่ำ เสียงน็อก และเพลาชำรุด"],
-          ["กลไกลูกสูบ", "เพลาข้อเหวี่ยง", "ด้านล่างของลูกสูบภายในเสื้อสูบ", "เปลี่ยนแรงขึ้นลงเป็นแรงบิดหมุน", "สั่น เสียงเคาะ แบริ่งไหม้ หรือเพลาคด"],
-          ["กลไกลูกสูบ", "แบริ่งหลัก", "รองรับเพลาข้อเหวี่ยงกับเสื้อสูบ", "รักษาแนวเพลาและรับแรงจากการเผาไหม้", "แรงดันน้ำมันต่ำ เสียงผิดปกติ และเพลาสึก"],
-          ["กลไกลูกสูบ", "ฟลายวีล", "ปลายเพลาข้อเหวี่ยงด้านส่งกำลัง", "สะสมพลังงานเฉื่อย ทำให้รอบเรียบ และเป็นจุดขบของมอเตอร์สตาร์ต", "การสั่น เสียงจากเฟือง หรือสตาร์ตไม่จับ"],
-          ["กลไกลูกสูบ", "แดมเปอร์เพลาข้อเหวี่ยง", "ปลายหน้าเพลาข้อเหวี่ยงในบางแบบ", "ลดการสั่นบิดของเพลาข้อเหวี่ยง", "สั่นผิดปกติและความเสียหายของพูลเลย์หรือเพลา"],
-          ["กลไกวาล์ว", "เพลาลูกเบี้ยว", "อยู่ในฝาสูบหรือเสื้อสูบตามการออกแบบ", "กำหนดเวลาและระยะยกของวาล์ว", "กำลังตก เสียงวาล์ว และเวลาเปิดปิดคลาดเคลื่อน"],
-          ["กลไกวาล์ว", "ลูกกระทุ้ง", "รับแรงจากลูกเบี้ยวในระบบที่ใช้ชิ้นส่วนนี้", "ถ่ายทอดการเคลื่อนที่ไปยังก้านกระทุ้งหรือกระเดื่อง", "เสียงดัง ระยะวาล์วผิด และผิวสัมผัสสึก"],
-          ["กลไกวาล์ว", "ก้านกระทุ้ง", "ระหว่างลูกกระทุ้งกับกระเดื่องในระบบ OHV", "ถ่ายทอดแรงจากเพลาลูกเบี้ยวขึ้นสู่ฝาสูบ", "ก้านคด วาล์วเปิดไม่เต็ม และกำลังลด"],
-          ["กลไกวาล์ว", "กระเดื่องวาล์ว", "เหนือวาล์วบนฝาสูบ", "เปลี่ยนทิศและถ่ายทอดแรงเพื่อกดวาล์ว", "เสียงวาล์วดัง ระยะห่างผิด หรือสึกหรอ"],
-          ["กลไกวาล์ว", "วาล์วไอดี", "ช่องทางอากาศเข้าฝาสูบ", "เปิดให้อากาศเข้าสู่กระบอกสูบ", "กำลังอัดรั่ว เดินไม่เรียบ และกำลังตก"],
-          ["กลไกวาล์ว", "วาล์วไอเสีย", "ช่องทางก๊าซออกฝาสูบ", "เปิดให้ก๊าซเผาไหม้ออกจากกระบอกสูบ", "วาล์วไหม้ อุณหภูมิไอเสียสูง และกำลังอัดต่ำ"],
-          ["กลไกวาล์ว", "สปริงวาล์ว", "รอบก้านวาล์ว", "ปิดวาล์วและรักษาการสัมผัสของชุดกลไก", "วาล์วลอย สปริงหัก หรือเครื่องสะดุดที่รอบสูง"],
-          ["กลไกวาล์ว", "บ่าวาล์ว", "จุดสัมผัสระหว่างวาล์วกับฝาสูบ", "ซีลห้องเผาไหม้และถ่ายเทความร้อนจากวาล์ว", "กำลังอัดรั่ว วาล์วไหม้ และสตาร์ตยาก"],
-          ["กลไกวาล์ว", "ปลอกนำวาล์ว", "รองรับก้านวาล์วในฝาสูบ", "รักษาแนวการเคลื่อนที่และช่วยถ่ายเทความร้อน", "กินน้ำมันเครื่อง ควันสีน้ำเงิน และวาล์วคลอน"],
-          ["กลไกวาล์ว", "เฟืองหรือโซ่ไทม์มิ่ง", "เชื่อมเพลาข้อเหวี่ยงกับเพลาลูกเบี้ยว", "ทำให้เวลาวาล์วสัมพันธ์กับตำแหน่งลูกสูบ", "เครื่องไม่ติด กำลังตก หรือเกิดการชนภายในในบางแบบ"]
+          ["กลไกลูกสูบ", "กระบอกสูบ", "รักษาแนวลูกสูบและกักความดันการเผาไหม้", "กำลังอัดต่ำ กินน้ำมันเครื่อง"],
+          ["กลไกลูกสูบ", "ลูกสูบ", "รับแรงดันจากก๊าซเผาไหม้และถ่ายทอดแรง", "เสียงเคาะ กำลังตก"],
+          ["กลไกลูกสูบ", "ก้านสูบ", "เชื่อมลูกสูบกับเพลาข้อเหวี่ยง", "ก้านคด แบริ่งสึกหรอ"],
+          ["กลไกลูกสูบ", "เพลาข้อเหวี่ยง", "เปลี่ยนแรงขึ้นลงเป็นแรงบิดหมุน", "สั่น เสียงเคาะ แบริ่งไหม้"],
+          ["กลไกวาล์ว", "วาล์วไอดี/ไอเสีย", "เปิด–ปิดทางเข้าออกของก๊าซ", "วาล์วรั่ว วาล์วไหม้ กำลังตก"]
         ]
       },
       {
         id: "intake",
         title: "4. ระบบไอดีและเทอร์โบชาร์จเจอร์",
-        description:
-          "เส้นทางอากาศตั้งแต่ภายนอก ผ่านกรองอากาศ คอมเพรสเซอร์ อินเตอร์คูลเลอร์ และเข้าสู่กระบอกสูบ",
-        flow: [
-          "ช่องรับอากาศ",
-          "กรองอากาศ",
-          "คอมเพรสเซอร์เทอร์โบ",
-          "อินเตอร์คูลเลอร์",
-          "ท่อร่วมไอดี",
-          "วาล์วไอดี",
-          "กระบอกสูบ"
-        ],
-        headers: [
-          "ลำดับ",
-          "ชิ้นส่วนหรือขั้นตอน",
-          "หน้าที่",
-          "ตัวแปรสำคัญ",
-          "ความผิดปกติที่อาจพบ"
-        ],
+        description: "เส้นทางอากาศตั้งแต่กรองอากาศ คอมเพรสเซอร์เทอร์โบ จนถึงห้องเผาไหม้",
+        flow: ["ช่องรับอากาศ", "กรองอากาศ", "คอมเพรสเซอร์เทอร์โบ", "อินเตอร์คูลเลอร์", "ท่อร่วมไอดี", "กระบอกสูบ"],
+        headers: ["ชิ้นส่วน", "หน้าที่สำคัญ", "ความผิดปกติที่พบบ่อย"],
         rows: [
-          ["1", "ช่องรับอากาศ", "รับอากาศจากภายนอก", "ความสะอาดและการอุดตัน", "สิ่งแปลกปลอม น้ำ หรือฝุ่นเข้าสู่ระบบ"],
-          ["2", "กรองอากาศ", "ดักฝุ่นก่อนเข้าสู่คอมเพรสเซอร์และกระบอกสูบ", "ความดันตกคร่อมและสภาพไส้กรอง", "ไส้กรองตันทำให้กำลังตกและควันดำ"],
-          ["3", "ท่อไอดีก่อนเทอร์โบ", "นำอากาศเข้าสู่คอมเพรสเซอร์", "ความแน่นของข้อต่อ", "ท่อรั่วหรือยุบตัวทำให้อากาศไม่พอ"],
-          ["4", "คอมเพรสเซอร์เทอร์โบ", "เพิ่มความดันและมวลอากาศ", "แรงดันบูสต์ อุณหภูมิ และรอบเทอร์โบ", "ใบพัดเสียหาย น้ำมันรั่ว หรือบูสต์ต่ำ"],
-          ["5", "อินเตอร์คูลเลอร์ถ้ามี", "ลดอุณหภูมิอากาศหลังการอัดเพื่อเพิ่มความหนาแน่น", "อุณหภูมิขาเข้าและขาออก ความดันตกคร่อม", "รั่ว อุดตัน หรือระบายความร้อนไม่ดี"],
-          ["6", "ท่ออากาศอัด", "ส่งอากาศจากเทอร์โบหรืออินเตอร์คูลเลอร์", "ความแน่นและความแข็งแรง", "แคลมป์หลวม ท่อแตก และบูสต์รั่ว"],
-          ["7", "ท่อร่วมไอดี", "กระจายอากาศไปยังกระบอกสูบ", "ความสม่ำเสมอของการไหล", "เขม่าหรือน้ำมันสะสมทำให้ช่องทางแคบ"],
-          ["8", "วาล์วไอดี", "เปิดตามจังหวะดูด", "เวลาเปิด ระยะยก และการซีล", "วาล์วรั่วหรือระยะวาล์วผิด"],
-          ["9", "กระบอกสูบ", "รับอากาศสำหรับการอัดและเผาไหม้", "มวลอากาศ อุณหภูมิ และความดัน", "อากาศไม่พอทำให้เผาไหม้ไม่สมบูรณ์"],
-          ["-", "เซนเซอร์แรงดันไอดี", "วัดแรงดันในท่อร่วมไอดี", "ค่าแรงดันสัมบูรณ์", "ค่าคลาดเคลื่อนทำให้ควบคุมเชื้อเพลิงผิด"],
-          ["-", "เซนเซอร์อุณหภูมิอากาศ", "วัดอุณหภูมิอากาศเข้า", "อุณหภูมิอากาศ", "อ่านค่าผิดส่งผลต่อการคำนวณมวลอากาศ"],
-          ["-", "เวสต์เกตถ้ามี", "จำกัดพลังงานไอเสียที่ผ่านกังหันเพื่อควบคุมบูสต์", "แรงดันเปิดและการเคลื่อนที่", "ค้างปิดทำให้บูสต์เกิน ค้างเปิดทำให้บูสต์ต่ำ"],
-          ["-", "เทอร์โบแปรผันถ้ามี", "ปรับพื้นที่ทางผ่านไอเสียตามภาระและรอบ", "ตำแหน่งครีบและคำสั่งควบคุม", "เขม่าทำให้ครีบติดและการตอบสนองผิดปกติ"]
+          ["กรองอากาศ", "ดักฝุ่นก่อนเข้าสู่คอมเพรสเซอร์", "ไส้กรองตันทำให้กำลังตกและควันดำ"],
+          ["คอมเพรสเซอร์เทอร์โบ", "เพิ่มความดันและมวลอากาศเข้าเครื่อง", "ใบพัดเสียหาย บูสต์ต่ำ น้ำมันรั่ว"],
+          ["อินเตอร์คูลเลอร์", "ลดอุณหภูมิอากาศอัดเพื่อเพิ่มความหนาแน่น", "ครีบระบายความร้อนอุดตัน หรือรั่วซึม"]
         ]
       },
       {
         id: "exhaust",
-        title: "5. ระบบไอเสียและการควบคุมมลพิษ",
-        description:
-          "ระบายก๊าซเผาไหม้ ใช้พลังงานไอเสียขับเทอร์โบ ลดเสียง และลดมลพิษก่อนปล่อยสู่บรรยากาศ",
-        flow: [
-          "วาล์วไอเสีย",
-          "ท่อร่วมไอเสีย",
-          "กังหันเทอร์โบ",
-          "อุปกรณ์บำบัดไอเสีย",
-          "หม้อพัก",
-          "ปลายท่อ"
-        ],
-        headers: [
-          "ลำดับ",
-          "ชิ้นส่วนหรือขั้นตอน",
-          "หน้าที่",
-          "ความผิดปกติที่อาจพบ",
-          "ผลกระทบ"
-        ],
+        title: "5. ระบบไอเสีย",
+        description: "ระบายก๊าซ ขับกังหันเทอร์โบ และลดเสียง",
+        flow: ["วาล์วไอเสีย", "ท่อร่วมไอเสีย", "กังหันเทอร์โบ", "หม้อพักไอเสีย", "ปลายท่อ"],
+        headers: ["ชิ้นส่วน", "หน้าที่สำคัญ", "ความผิดปกติที่พบบ่อย"],
         rows: [
-          ["1", "วาล์วไอเสีย", "เปิดให้ก๊าซเผาไหม้ออกจากกระบอกสูบ", "วาล์วไหม้ วาล์วรั่ว หรือระยะวาล์วผิด", "กำลังอัดต่ำ อุณหภูมิสูง และกำลังตก"],
-          ["2", "ช่องไอเสียในฝาสูบ", "นำก๊าซจากวาล์วไปยังท่อร่วม", "รอยร้าวหรือเขม่าสะสม", "รั่ว เสียงดัง และการไหลติดขัด"],
-          ["3", "ท่อร่วมไอเสีย", "รวมไอเสียจากแต่ละสูบ", "ปะเก็นรั่ว ท่อแตก หรือสลักหลวม", "เสียงดัง เขม่ารั่ว และพลังงานเข้าเทอร์โบลดลง"],
-          ["4", "กังหันเทอร์โบ", "เปลี่ยนพลังงานไอเสียเป็นพลังงานหมุน", "ใบกังหันเสีย แบริ่งสึก หรือมีสิ่งแปลกปลอม", "บูสต์ต่ำ เสียงผิดปกติ และน้ำมันรั่ว"],
-          ["5", "ท่อไอเสียหลังเทอร์โบ", "ระบายก๊าซออกจากกังหัน", "ท่อบี้ อุดตัน หรือรั่ว", "ความดันย้อนกลับสูงหรือเสียงดัง"],
-          ["6", "ตัวเร่งปฏิกิริยาออกซิเดชันถ้ามี", "ลดไฮโดรคาร์บอนและคาร์บอนมอนอกไซด์", "อุดตันหรือประสิทธิภาพลดลง", "มลพิษสูงและความดันย้อนกลับเพิ่ม"],
-          ["7", "ตัวกรองอนุภาคดีเซลถ้ามี", "ดักจับเขม่าฝุ่น", "เขม่าสะสมและการฟื้นฟูไม่สำเร็จ", "กำลังตก ความร้อนสูง และไฟเตือน"],
-          ["8", "ระบบ SCR ถ้ามี", "ลดออกไซด์ของไนโตรเจนด้วยสารละลายยูเรีย", "หัวฉีดอุดตัน เซนเซอร์ผิด หรือสารละลายไม่ได้มาตรฐาน", "มลพิษสูงและระบบจำกัดกำลังในบางแบบ"],
-          ["9", "หม้อพักไอเสีย", "ลดระดับเสียง", "ภายในแตก อุดตัน หรือผุ", "เสียงดังหรือความดันย้อนกลับสูง"],
-          ["10", "ปลายท่อไอเสีย", "ปล่อยก๊าซสู่บรรยากาศในทิศทางปลอดภัย", "อุดตันหรือวางตำแหน่งไม่เหมาะสม", "ก๊าซย้อนเข้าพื้นที่ทำงานและเกิดอันตราย"],
-          ["-", "เซนเซอร์อุณหภูมิไอเสียถ้ามี", "ตรวจอุณหภูมิก่อนและหลังอุปกรณ์บำบัด", "สัญญาณผิดหรือสายขาด", "การควบคุมเทอร์โบและการฟื้นฟูผิดพลาด"],
-          ["-", "เซนเซอร์ความดันแตกต่างถ้ามี", "ตรวจการอุดตันของตัวกรองอนุภาค", "ท่อเซนเซอร์ตันหรือรั่ว", "ประเมินปริมาณเขม่าผิด"]
+          ["ท่อร่วมไอเสีย", "รวมไอเสียจากทุกสูบส่งไปขับเทอร์โบ", "ปะเก็นรั่ว ท่อแตก เสียงดัง"],
+          ["กังหันเทอร์โบ", "เปลี่ยนพลังงานไอเสียเป็นแรงหมุนคอมเพรสเซอร์", "แบริ่งสึกหรอ มีเสียงหวีดผิดปกติ"],
+          ["หม้อพักไอเสีย", "ลดเสียงดังจากการระบายไอเสีย", "ภายในผุกร่อนหรืออุดตัน"]
         ]
       },
       {
         id: "fuel",
         title: "6. ระบบเชื้อเพลิงดีเซล",
-        description:
-          "จัดเก็บ กรอง ส่ง เพิ่มแรงดัน และฉีดน้ำมันดีเซลให้เป็นละอองในเวลาที่เหมาะสม",
-        flow: [
-          "ถังเชื้อเพลิง",
-          "ตัวแยกน้ำ",
-          "กรองเชื้อเพลิง",
-          "ปั๊มส่ง",
-          "ปั๊มแรงดันสูง",
-          "รางร่วม",
-          "หัวฉีด",
-          "ท่อน้ำมันกลับ"
-        ],
-        headers: [
-          "ลำดับ",
-          "ชิ้นส่วน",
-          "หน้าที่",
-          "รายละเอียดทางเทคนิค",
-          "ความผิดปกติที่พบบ่อย"
-        ],
+        description: "กรอง เพิ่มแรงดัน และฉีดน้ำมันดีเซล",
+        flow: ["ถังเชื้อเพลิง", "กรองเชื้อเพลิง", "ปั๊มแรงดันสูง", "รางร่วม", "หัวฉีด"],
+        headers: ["ชิ้นส่วน", "หน้าที่สำคัญ", "ความผิดปกติที่พบบ่อย"],
         rows: [
-          ["1", "ถังเชื้อเพลิง", "เก็บน้ำมันดีเซล", "ต้องลดการปนเปื้อนของน้ำ ฝุ่น และตะกอน", "น้ำหรือสิ่งสกปรกในถัง เชื้อเพลิงเสื่อมสภาพ"],
-          ["2", "ท่อดูดเชื้อเพลิง", "นำเชื้อเพลิงจากถัง", "ต้องไม่รั่วอากาศและไม่ตีบ", "อากาศเข้าระบบ ท่อแตก หรืออุดตัน"],
-          ["3", "ตัวแยกน้ำ", "แยกน้ำออกจากน้ำมันดีเซล", "มักติดร่วมกับกรองหยาบ", "น้ำสะสมทำให้สนิมและหัวฉีดเสียหาย"],
-          ["4", "กรองเชื้อเพลิง", "กรองอนุภาคก่อนถึงปั๊มและหัวฉีด", "ระบบแรงดันสูงต้องการความสะอาดมาก", "กรองตันทำให้แรงดันต่ำและเครื่องสะดุด"],
-          ["5", "ปั๊มส่งเชื้อเพลิง", "ส่งเชื้อเพลิงแรงดันต่ำไปยังปั๊มฉีด", "อาจเป็นแบบกลไกหรือไฟฟ้า", "แรงดันต่ำ สตาร์ตยาก และดับเมื่อรับภาระ"],
-          ["6", "ปั๊มแรงดันสูง", "เพิ่มแรงดันสำหรับการฉีด", "ในระบบ Common Rail ส่งน้ำมันเข้าสู่รางร่วม", "สึกหรอ เศษโลหะปนเปื้อน และแรงดันไม่ถึง"],
-          ["7", "รางร่วมถ้ามี", "สะสมและจ่ายเชื้อเพลิงแรงดันสูง", "ช่วยรักษาแรงดันให้เหมาะกับทุกหัวฉีด", "แรงดันแกว่ง วาล์วควบคุมผิด หรือรั่ว"],
-          ["8", "ท่อแรงดันสูง", "ส่งน้ำมันแรงดันสูงไปหัวฉีด", "ต้องทนแรงดันสูงและห้ามดัดแปลงโดยไม่เหมาะสม", "รั่ว แตก หรือข้อต่อเสียหาย"],
-          ["9", "หัวฉีด", "ทำให้เชื้อเพลิงเป็นละอองและกำหนดช่วงฉีด", "คุณภาพละอองมีผลต่อการจุดระเบิดและการเผาไหม้", "หัวฉีดตัน รั่ว ฉีดไม่สมดุล หรือควันดำ"],
-          ["10", "ท่อน้ำมันกลับ", "ส่งเชื้อเพลิงส่วนเกินกลับถัง", "ช่วยระบายความร้อนและรักษาการไหล", "ท่อตันทำให้แรงดันกลับสูง หรือรั่วทำให้มีกลิ่น"],
-          ["11", "ตัวควบคุมแรงดัน", "รักษาแรงดันเชื้อเพลิงตามคำสั่ง", "อาจอยู่ที่ปั๊มหรือรางร่วม", "แรงดันสูงหรือต่ำเกินและเครื่องเดินไม่เรียบ"],
-          ["12", "กล่องควบคุมเครื่องยนต์", "คำนวณปริมาณ เวลา และจำนวนครั้งการฉีดในระบบอิเล็กทรอนิกส์", "ใช้ข้อมูลรอบ ภาระ อุณหภูมิ และแรงดัน", "สัญญาณผิดทำให้ฉีดไม่เหมาะสมหรือเครื่องไม่ติด"],
-          ["-", "ระบบปั๊มฉีดแบบกลไก", "ปั๊มกำหนดแรงดัน ปริมาณ และเวลาโดยกลไก", "พบในเครื่องยนต์รุ่นเก่าหรือเครื่องจักรบางประเภท", "ต้องตั้งเวลาและสอบเทียบปั๊มอย่างถูกต้อง"],
-          ["-", "ระบบ Common Rail", "แยกการสร้างแรงดันออกจากการควบคุมหัวฉีด", "ให้ความยืดหยุ่นด้านเวลาและหลายจังหวะฉีด", "ไวต่อความสะอาดและคุณภาพเชื้อเพลิง"]
+          ["กรองเชื้อเพลิง", "กรองสิ่งสกปรกและดักน้ำ", "กรองตันทำให้แรงดันตก เครื่องสะดุด"],
+          ["ปั๊มแรงดันสูง", "สร้างแรงดันสูงสำหรับระบบฉีดน้ำมัน", "สึกหรอ แรงดันไม่พอ สตาร์ตยาก"],
+          ["หัวฉีด", "ฉีดน้ำมันเป็นละอองฝอยละเอียด", "หัวฉีดตัน รั่ว ฉีดไม่สมดุล ควันดำ"]
         ]
       },
       {
         id: "lubrication",
         title: "7. ระบบหล่อลื่น",
-        description:
-          "สร้างฟิล์มน้ำมันระหว่างผิวโลหะ ลดแรงเสียดทาน ระบายความร้อน ชะล้างสิ่งสกปรก และป้องกันการสึกหรอ",
-        flow: [
-          "อ่างน้ำมันเครื่อง",
-          "ตะแกรงดูด",
-          "ปั๊มน้ำมันเครื่อง",
-          "กรองน้ำมัน",
-          "แกลเลอรีน้ำมัน",
-          "จุดหล่อลื่น",
-          "ไหลกลับอ่าง"
-        ],
-        headers: [
-          "ลำดับ",
-          "ชิ้นส่วนหรือทางเดิน",
-          "หน้าที่",
-          "จุดตรวจสอบ",
-          "ความผิดปกติและผลกระทบ"
-        ],
+        description: "ลดแรงเสียดทาน ระบายความร้อน และป้องกันการสึกหรอ",
+        flow: ["อ่างน้ำมันเครื่อง", "ปั๊มน้ำมัน", "กรองน้ำมัน", "แกลเลอรี", "จุดหล่อลื่นต่าง ๆ"],
+        headers: ["ชิ้นส่วน", "หน้าที่สำคัญ", "ความผิดปกติที่พบบ่อย"],
         rows: [
-          ["1", "อ่างน้ำมันเครื่อง", "เก็บน้ำมันที่ไหลกลับจากเครื่องยนต์", "ระดับน้ำมัน รอยรั่ว และตะกอน", "ระดับต่ำทำให้ดูดอากาศ ระดับสูงอาจเกิดฟองหรือการปนเปื้อน"],
-          ["2", "ตะแกรงดูดน้ำมัน", "ดักเศษขนาดใหญ่ก่อนเข้าปั๊ม", "การอุดตันและความแน่นของท่อดูด", "ปั๊มขาดน้ำมันและแรงดันต่ำ"],
-          ["3", "ปั๊มน้ำมันเครื่อง", "สร้างการไหลและแรงดัน", "การสึกของเฟืองหรือโรเตอร์", "แรงดันต่ำทำให้แบริ่งและเทอร์โบเสียหาย"],
-          ["4", "วาล์วระบายแรงดัน", "จำกัดแรงดันสูงเกิน", "การติดค้างและสปริง", "ค้างเปิดทำให้แรงดันต่ำ ค้างปิดทำให้แรงดันสูง"],
-          ["5", "กรองน้ำมันเครื่อง", "กรองเขม่า เศษโลหะ และตะกอน", "รอบเปลี่ยนและสภาพไส้กรอง", "กรองตัน วาล์วบายพาสเปิด และน้ำมันไม่ผ่านการกรอง"],
-          ["6", "ออยล์คูลเลอร์ถ้ามี", "ลดอุณหภูมิน้ำมัน", "การรั่วภายในและการอุดตัน", "น้ำกับน้ำมันปนกันหรืออุณหภูมิน้ำมันสูง"],
-          ["7", "แกลเลอรีน้ำมัน", "กระจายน้ำมันในเสื้อสูบและฝาสูบ", "การอุดตันและคราบตะกอน", "จุดหล่อลื่นบางตำแหน่งขาดน้ำมัน"],
-          ["8", "แบริ่งหลัก", "รับน้ำมันแรงดันเพื่อรองรับเพลาข้อเหวี่ยง", "ระยะห่างแบริ่งและแรงดัน", "สึกไหม้ เสียงเคาะ และเพลาชำรุด"],
-          ["9", "แบริ่งก้านสูบ", "หล่อลื่นข้อเพลากับก้านสูบ", "ระยะห่างและการไหล", "เสียงน็อกและก้านสูบเสียหาย"],
-          ["10", "ชุดเพลาลูกเบี้ยวและวาล์ว", "ลดการสึกของลูกเบี้ยว กระเดื่อง และก้านวาล์ว", "น้ำมันถึงฝาสูบและระยะวาล์ว", "เสียงดังและผิวลูกเบี้ยวสึก"],
-          ["11", "หัวฉีดน้ำมันใต้ลูกสูบถ้ามี", "ฉีดน้ำมันระบายความร้อนด้านใต้ลูกสูบ", "การอุดตันและทิศทางฉีด", "ลูกสูบร้อนสูงและเกิดความเสียหาย"],
-          ["12", "ท่อจ่ายน้ำมันเทอร์โบ", "หล่อลื่นแบริ่งเพลาเทอร์โบ", "ท่อพับ ตัน หรือรั่ว", "เทอร์โบขาดน้ำมันและเพลายึด"],
-          ["13", "ท่อน้ำมันกลับเทอร์โบ", "ระบายน้ำมันกลับอ่างด้วยแรงโน้มถ่วง", "ความลาดเอียงและการอุดตัน", "น้ำมันดันผ่านซีลเทอร์โบและเกิดควัน"],
-          ["14", "ช่องระบายไอเครื่อง", "ระบายก๊าซรั่วผ่านแหวนและควบคุมความดันอ่างข้อเหวี่ยง", "การอุดตันและปริมาณไอ", "ความดันสูงดันซีลรั่วและกินน้ำมันเครื่อง"],
-          ["-", "คุณสมบัติน้ำมันเครื่อง", "สร้างฟิล์มหล่อลื่น ชะล้าง ระบายความร้อน และป้องกันสนิม", "ความหนืด มาตรฐาน และการปนเปื้อน", "น้ำมันผิดเกรดหรือเสื่อมทำให้สึกหรอเร็ว"]
+          ["ปั๊มน้ำมันเครื่อง", "สร้างแรงดันหมุนเวียนน้ำมันทั่วเครื่อง", "แรงดันต่ำทำให้แบริ่งและเทอร์โบเสียหาย"],
+          ["กรองน้ำมันเครื่อง", "กรองเขม่าและเศษโลหะในน้ำมัน", "กรองตัน วาล์บายพาสเปิด น้ำมันไม่สะอาด"]
         ]
       },
       {
         id: "cooling",
         title: "8. ระบบระบายความร้อน",
-        description:
-          "หมุนเวียนน้ำหล่อเย็นผ่านเสื้อสูบและฝาสูบ ก่อนถ่ายเทความร้อนสู่อากาศผ่านหม้อน้ำ",
-        flow: [
-          "ปั๊มน้ำ",
-          "ช่องน้ำในเสื้อสูบ",
-          "ช่องน้ำในฝาสูบ",
-          "วาล์วน้ำ",
-          "หม้อน้ำ",
-          "ท่อน้ำล่าง",
-          "กลับสู่ปั๊มน้ำ"
-        ],
-        headers: [
-          "ลำดับ",
-          "ชิ้นส่วนหรือขั้นตอน",
-          "หน้าที่",
-          "จุดตรวจสอบ",
-          "ความผิดปกติและผลกระทบ"
-        ],
+        description: "ควบคุมอุณหภูมิเครื่องยนต์ให้อยู่ในเกณฑ์เหมาะสม",
+        flow: ["ปั๊มน้ำ", "เสื้อสูบ/ฝาสูบ", "วาล์วน้ำ", "หม้อน้ำ", "พัดลม"],
+        headers: ["ชิ้นส่วน", "หน้าที่สำคัญ", "ความผิดปกติที่พบบ่อย"],
         rows: [
-          ["1", "ปั๊มน้ำ", "หมุนเวียนน้ำหล่อเย็น", "รอยรั่ว เสียงแบริ่ง และใบพัด", "การไหลต่ำทำให้เครื่องร้อนเกิน"],
-          ["2", "ช่องน้ำในเสื้อสูบ", "รับความร้อนจากกระบอกสูบ", "ตะกรัน สนิม และการอุดตัน", "จุดร้อนเฉพาะที่และเสื้อสูบเสียหาย"],
-          ["3", "ช่องน้ำในฝาสูบ", "ระบายความร้อนรอบห้องเผาไหม้และวาล์ว", "การอุดตันและรอยร้าว", "ฝาสูบโก่ง ปะเก็นเสีย หรือวาล์วร้อนเกิน"],
-          ["4", "วาล์วน้ำ", "ควบคุมการไหลสู่หม้อน้ำตามอุณหภูมิ", "อุณหภูมิเปิดและการติดค้าง", "ค้างปิดทำให้ร้อน ค้างเปิดทำให้อุ่นช้า"],
-          ["5", "ท่อน้ำบน", "ส่งน้ำร้อนจากเครื่องไปหม้อน้ำ", "บวม แข็ง รั่ว และแคลมป์", "สูญเสียน้ำหล่อเย็นหรือท่อแตก"],
-          ["6", "หม้อน้ำ", "ถ่ายเทความร้อนสู่อากาศ", "ครีบอุดตัน รั่ว และตะกรันภายใน", "ระบายความร้อนไม่พอและเครื่องร้อน"],
-          ["7", "พัดลม", "ทำให้อากาศไหลผ่านหม้อน้ำ", "ใบพัด สายพาน คลัตช์ หรือมอเตอร์", "อากาศไม่พอเมื่อรอบต่ำหรือจอดนิ่ง"],
-          ["8", "ท่อน้ำล่าง", "ส่งน้ำที่เย็นลงกลับสู่ปั๊ม", "การยุบตัว รั่ว และแคลมป์", "ปั๊มขาดน้ำหรือการไหลลดลง"],
-          ["9", "ถังพักน้ำ", "รองรับการขยายตัวและคืนของน้ำหล่อเย็น", "ระดับ รอยรั่ว และฝาปิด", "อากาศเข้าระบบหรือสูญเสียน้ำหล่อเย็น"],
-          ["10", "ฝาหม้อน้ำหรือฝาถังแรงดัน", "รักษาความดันระบบและควบคุมการไหลไปถังพัก", "ซีลและค่าความดัน", "จุดเดือดลด น้ำล้น หรือท่อยุบ"],
-          ["11", "น้ำหล่อเย็น", "ถ่ายเทความร้อน ป้องกันสนิม ตะกรัน และการแข็งตัว", "สัดส่วน อายุ และการปนเปื้อน", "กัดกร่อน ตะกรัน จุดเดือดไม่เหมาะสม"],
-          ["12", "เซนเซอร์อุณหภูมิน้ำ", "ส่งค่าให้มาตรวัดหรือกล่องควบคุม", "ค่าความต้านทานและขั้วต่อ", "เตือนผิดหรือควบคุมการฉีดไม่เหมาะสม"],
-          ["13", "ฮีตเอกซ์เชนเจอร์ในชุดกำเนิดไฟฟ้าบางแบบ", "ถ่ายเทความร้อนระหว่างวงจรน้ำ", "การรั่วและประสิทธิภาพแลกเปลี่ยน", "น้ำปนกันหรือระบายความร้อนไม่พอ"]
+          ["ปั๊มน้ำ", "หมุนเวียนน้ำหล่อเย็นในระบบ", "ใบพัดสึกหรอ หรือรั่วซึม"],
+          ["วาล์วน้ำ", "ควบคุมการไหลของน้ำตามอุณหภูมิเครื่อง", "วาล์วติดค้างทำให้เครื่องร้อนจัดหรือเย็นเกินไป"],
+          ["หม้อน้ำ", "ถ่ายเทความร้อนสู่อากาศภายนอก", "ครีบตัน ตะกรันสะสม น้ำรั่ว"]
         ]
       },
       {
         id: "electrical",
         title: "9. ระบบไฟฟ้า สตาร์ต และควบคุม",
-        description:
-          "จ่ายพลังงานช่วงสตาร์ต ผลิตไฟฟ้า ตรวจวัดสภาวะ และควบคุมการทำงานของเครื่องยนต์",
-        headers: [
-          "กลุ่ม",
-          "ชิ้นส่วน",
-          "หน้าที่",
-          "ความผิดปกติที่พบบ่อย",
-          "อาการที่พบ"
-        ],
+        description: "จ่ายไฟ สตาร์ต และควบคุมการทำงานด้วยอิเล็กทรอนิกส์",
+        headers: ["กลุ่ม", "ชิ้นส่วน", "หน้าที่สำคัญ", "อาการเสียที่พบบ่อย"],
         rows: [
-          ["ระบบสตาร์ต", "แบตเตอรี่", "เก็บและจ่ายพลังงานไฟฟ้ากระแสตรง", "ประจุต่ำ เซลล์เสื่อม ขั้วสกปรก", "หมุนช้า เสียงคลิก หรือไฟตก"],
-          ["ระบบสตาร์ต", "สวิตช์หรือรีเลย์สตาร์ต", "ส่งคำสั่งไปโซลินอยด์", "หน้าสัมผัสไหม้ สายหลวม", "ไม่มีการตอบสนองหรือสตาร์ตเป็นครั้งคราว"],
-          ["ระบบสตาร์ต", "โซลินอยด์สตาร์ต", "เลื่อนเฟืองให้ขบฟลายวีลและต่อกระแสหลัก", "ขดลวดเสียหรือหน้าสัมผัสไหม้", "มีเสียงคลิกแต่ไม่หมุน"],
-          ["ระบบสตาร์ต", "มอเตอร์สตาร์ต", "หมุนเพลาข้อเหวี่ยงให้เกิดรอบเริ่มต้น", "แปรงถ่านสึก ขดลวดเสีย หรือแบริ่งติด", "หมุนช้า ร้อน หรือไม่หมุน"],
-          ["ระบบสตาร์ต", "เฟืองขับสตาร์ต", "ขบกับเฟืองวงแหวนของฟลายวีล", "ฟันสึกหรือชุดฟรีติด", "เสียงบด ขบไม่เข้า หรือไม่ถอน"],
-          ["ระบบชาร์จ", "ไดชาร์จ", "ผลิตไฟและชาร์จแบตเตอรี่เมื่อเครื่องเดิน", "เรกูเลเตอร์เสีย ไดโอดเสีย หรือแปรงถ่านสึก", "ไฟชาร์จเตือน แบตหมด หรือแรงดันสูงเกิน"],
-          ["ระบบชาร์จ", "สายพานหน้าเครื่อง", "ขับไดชาร์จ พัดลม หรือปั๊มตามการออกแบบ", "หย่อน แตก หรือเปื้อนน้ำมัน", "เสียงลื่น ชาร์จต่ำ และอาจเกิดความร้อนสูง"],
-          ["ระบบควบคุม", "กล่องควบคุมเครื่องยนต์", "ประมวลผลข้อมูลและควบคุมการฉีดกับอุปกรณ์ต่าง ๆ", "ไฟเลี้ยงไม่พอ ขั้วต่อชื้น หรือวงจรเสีย", "เครื่องไม่ติด จำกัดกำลัง หรือมีรหัสขัดข้อง"],
-          ["ระบบควบคุม", "เซนเซอร์ตำแหน่งเพลาข้อเหวี่ยง", "ให้ข้อมูลรอบและตำแหน่งลูกสูบ", "สัญญาณขาดหรือระยะติดตั้งผิด", "เครื่องดับ ไม่ฉีด หรือสตาร์ตไม่ติด"],
-          ["ระบบควบคุม", "เซนเซอร์ตำแหน่งเพลาลูกเบี้ยว", "ระบุสูบและลำดับการฉีด", "สัญญาณผิดหรือสายเสีย", "สตาร์ตนาน เดินไม่เรียบ หรือใช้โหมดสำรอง"],
-          ["ระบบควบคุม", "เซนเซอร์แรงดันน้ำมันเครื่อง", "ตรวจแรงดันระบบหล่อลื่น", "เซนเซอร์เสียหรือทางเดินตัน", "เตือนผิดหรือไม่เตือนเมื่อแรงดันต่ำ"],
-          ["ระบบควบคุม", "เซนเซอร์อุณหภูมิน้ำ", "ตรวจอุณหภูมิเครื่องยนต์", "ค่าคลาดเคลื่อนหรือขั้วต่อหลวม", "พัดลมหรือการฉีดทำงานไม่เหมาะสม"],
-          ["ระบบควบคุม", "เซนเซอร์แรงดันไอดี", "ตรวจแรงดันอากาศและบูสต์", "คราบน้ำมัน สายรั่ว หรือวงจรเสีย", "กำลังตก ควันดำ หรือบูสต์ควบคุมผิด"],
-          ["ระบบควบคุม", "เซนเซอร์แรงดันรางเชื้อเพลิง", "ป้อนกลับแรงดันเชื้อเพลิง", "สัญญาณผิดหรือรางแรงดันไม่เสถียร", "เครื่องดับ สตาร์ตยาก หรือจำกัดกำลัง"],
-          ["ระบบช่วยสตาร์ต", "หัวเผาในบางเครื่องยนต์", "เพิ่มความร้อนในห้องเผาไหม้ช่วงอากาศเย็น", "หัวเผาขาด รีเลย์เสีย", "สตาร์ตยาก ควันขาว และเดินสะดุดเมื่อเย็น"],
-          ["ชุดกำเนิดไฟฟ้า", "ตัวควบคุมความเร็ว", "รักษารอบเครื่องยนต์ตามความถี่ไฟฟ้าที่ต้องการ", "การตั้งค่า เซนเซอร์ หรือแอคชูเอเตอร์ผิด", "ความถี่ไม่นิ่งและรอบแกว่ง"],
-          ["ชุดกำเนิดไฟฟ้า", "แผงควบคุมเครื่องกำเนิดไฟฟ้า", "สั่งสตาร์ต หยุด ป้องกัน และแสดงผล", "แหล่งจ่ายไฟ สัญญาณอินพุต หรือรีเลย์เสีย", "ไม่สตาร์ต ตัดฉุกเฉิน หรือแสดงผลผิด"],
-          ["ชุดกำเนิดไฟฟ้า", "ระบบหยุดฉุกเฉิน", "หยุดเครื่องเมื่อเกิดภาวะอันตราย", "สวิตช์ค้าง วงจรเปิด หรือการตั้งค่า", "เครื่องไม่ยอมสตาร์ตหรือไม่หยุดตามคำสั่ง"]
+          ["ระบบสตาร์ต", "มอเตอร์สตาร์ต", "หมุนเพลาข้อเหวี่ยงเพื่อเริ่มทำงาน", "คลิกแต่ไม่หมุน หมุนช้า"],
+          ["ระบบชาร์จ", "ไดชาร์จ", "ผลิตไฟฟ้าและชาร์จแบตเตอรี่", "ไฟชาร์จโชว์ แบตหมด"],
+          ["ระบบควบคุม", "กล่อง ECU", "ประมวลผลและควบคุมการจ่ายเชื้อเพลิง", "เครื่องไม่ติด มีรหัสความผิดปกติ"]
         ]
       }
     ];
 
     const cycleData = [
-      {
-        title: "1. จังหวะดูด",
-        angle: "0° ถึง 180°",
-        piston: "ศูนย์ตายบนลงสู่ศูนย์ตายล่าง",
-        intake: "เปิด",
-        exhaust: "ปิด",
-        event: "อากาศไหลผ่านระบบไอดีเข้าสู่กระบอกสูบ",
-        result: "กระบอกสูบได้รับมวลอากาศสำหรับการอัด"
-      },
-      {
-        title: "2. จังหวะอัด",
-        angle: "180° ถึง 360°",
-        piston: "ศูนย์ตายล่างขึ้นสู่ศูนย์ตายบน",
-        intake: "ปิด",
-        exhaust: "ปิด",
-        event: "อากาศถูกอัดจนความดันและอุณหภูมิสูง หัวฉีดเริ่มฉีดใกล้ปลายจังหวะตามการออกแบบ",
-        result: "เตรียมสภาวะให้เชื้อเพลิงจุดระเบิดเอง"
-      },
-      {
-        title: "3. จังหวะกำลัง",
-        angle: "360° ถึง 540°",
-        piston: "ศูนย์ตายบนลงสู่ศูนย์ตายล่าง",
-        intake: "ปิด",
-        exhaust: "ปิด",
-        event: "เชื้อเพลิงที่ฉีดแตกตัวเป็นละออง ผสมกับอากาศร้อนและเผาไหม้ ก๊าซขยายตัวผลักลูกสูบ",
-        result: "เกิดงานกลและแรงบิดที่เพลาข้อเหวี่ยง"
-      },
-      {
-        title: "4. จังหวะคาย",
-        angle: "540° ถึง 720°",
-        piston: "ศูนย์ตายล่างขึ้นสู่ศูนย์ตายบน",
-        intake: "ปิด",
-        exhaust: "เปิด",
-        event: "ลูกสูบดันก๊าซเผาไหม้ออกจากกระบอกสูบผ่านระบบไอเสียและกังหันเทอร์โบ",
-        result: "ระบายก๊าซและเตรียมเริ่มวัฏจักรใหม่"
-      }
-    ];
-
-    const cycleNotes = [
-      ["เวลาเปิดปิดวาล์วจริง", "ในเครื่องยนต์จริง วาล์วอาจเปิดก่อนหรือปิดหลังศูนย์ตายเพื่อใช้ประโยชน์จากความเฉื่อยของก๊าซ ดังนั้นไม่ตรงกับช่วง 180° แบบอุดมคติทุกประการ"],
-      ["วาล์วซ้อน", "ช่วงใกล้ปลายคายและเริ่มดูด วาล์วไอดีกับวาล์วไอเสียอาจเปิดพร้อมกันเล็กน้อยตามการออกแบบ"],
-      ["การฉีดเชื้อเพลิง", "ระบบอิเล็กทรอนิกส์อาจมีการฉีดนำ การฉีดหลัก และการฉีดตาม เพื่อควบคุมเสียง กำลัง อุณหภูมิ และมลพิษ"],
-      ["การจุดระเบิดล่าช้า", "มีช่วงเวลาสั้นระหว่างเริ่มฉีดกับเริ่มเผาไหม้ ซึ่งขึ้นกับอุณหภูมิ ความดัน คุณภาพละออง และคุณสมบัติเชื้อเพลิง"],
-      ["อัตราส่วนกำลังอัด", "เครื่องยนต์ดีเซลใช้อัตราส่วนกำลังอัดสูงเพื่อให้อากาศร้อนพอสำหรับการจุดระเบิดด้วยตนเอง"]
+      { title: "1. จังหวะดูด", angle: "0° - 180°", piston: "ลง", intake: "เปิด", exhaust: "ปิด", event: "อากาศไหลเข้ากระบอกสูบ" },
+      { title: "2. จังหวะอัด", angle: "180° - 360°", piston: "ขึ้น", intake: "ปิด", exhaust: "ปิด", event: "อัดอากาศจนร้อนจัด" },
+      { title: "3. จังหวะกำลัง", angle: "360° - 540°", piston: "ลง", intake: "ปิด", exhaust: "ปิด", event: "ฉีดน้ำมันเกิดการเผาไหม้ดันลูกสูบ" },
+      { title: "4. จังหวะคาย", angle: "540° - 720°", piston: "ขึ้น", intake: "ปิด", exhaust: "เปิด", event: "ขับไล่ไอเสียออกจากกระบอกสูบ" }
     ];
 
     const contentSections = document.getElementById("contentSections");
     const searchInput = document.getElementById("searchInput");
     const clearSearch = document.getElementById("clearSearch");
     const themeButton = document.getElementById("themeButton");
-    const printButton = document.getElementById("printButton");
     const noResults = document.getElementById("noResults");
-    const backToTop = document.getElementById("backToTop");
 
-    function escapeHTML(value) {
-      return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-
-    function createFlow(flow) {
-      if (!flow || flow.length === 0) return "";
-
-      return `
-        <div class="flow" aria-label="ลำดับการทำงาน">
-          ${flow
-            .map(
-              (item, index) => `
-                <span class="flow-step">${escapeHTML(item)}</span>
-                ${index < flow.length - 1 ? '<span class="flow-arrow" aria-hidden="true">→</span>' : ""}
-              `
-            )
-            .join("")}
-        </div>
-      `;
-    }
-
-    function createTable(headers, rows) {
-      return `
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                ${headers.map(header => `<th scope="col">${escapeHTML(header)}</th>`).join("")}
-              </tr>
-            </thead>
-            <tbody>
-              ${rows
-                .map(
-                  row => `
-                    <tr class="searchable-row">
-                      ${row.map(cell => `<td>${escapeHTML(cell)}</td>`).join("")}
-                    </tr>
-                  `
-                )
-                .join("")}
-            </tbody>
-          </table>
-        </div>
-      `;
+    function escapeHTML(str) {
+      return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
     function renderSections() {
-      const regularSections = sections
-        .map(
-          section => `
-            <section
-              id="${escapeHTML(section.id)}"
-              class="section searchable-section"
-              data-title="${escapeHTML(section.title)}"
-            >
-              <div class="section-heading">
-                <div>
-                  <h2>${escapeHTML(section.title)}</h2>
-                  <p>${escapeHTML(section.description)}</p>
-                </div>
-                <span class="badge">${section.rows.length} รายการ</span>
+      let html = "";
+      sections.forEach(sec => {
+        let flowHtml = sec.flow ? `<div class="flow">${sec.flow.map((s, i) => `<span class="flow-step">${s}</span>${i < sec.flow.length - 1 ? '<span class="flow-arrow">→</span>' : ''}`).join('')}</div>` : "";
+        let rowsHtml = sec.rows.map(r => `<tr class="searchable-row">${r.map(c => `<td>${escapeHTML(c)}</td>`).join('')}</tr>`).join('');
+        
+        html += `
+          <section id="${sec.id}" class="section searchable-section" data-title="${sec.title}">
+            <div class="section-heading">
+              <div>
+                <h2>${escapeHTML(sec.title)}</h2>
+                <p>${escapeHTML(sec.description)}</p>
               </div>
+              <span class="badge">${sec.rows.length} รายการ</span>
+            </div>
+            ${flowHtml}
+            <div class="table-wrap">
+              <table>
+                <thead><tr>${sec.headers.map(h => `<th>${escapeHTML(h)}</th>`).join('')}</tr></thead>
+                <tbody>${rowsHtml}</tbody>
+              </table>
+            </div>
+          </section>
+        `;
+      });
 
-              ${createFlow(section.flow)}
-              ${createTable(section.headers, section.rows)}
-            </section>
-          `
-        )
-        .join("");
+      // เพิ่มส่วนวัฏจักร 4 จังหวะ
+      let cycleCards = cycleData.map(c => `
+        <article class="cycle-card searchable-row">
+          <h3>${escapeHTML(c.title)}</h3>
+          <p><strong>มุมเพลา:</strong> ${escapeHTML(c.angle)}</p>
+          <p><strong>ลูกสูบ:</strong> ${escapeHTML(c.piston)}</p>
+          <p><strong>ไอดี/ไอเสีย:</strong> ${escapeHTML(c.intake)} / ${escapeHTML(c.exhaust)}</p>
+          <p><strong>เหตุการณ์:</strong> ${escapeHTML(c.event)}</p>
+        </article>
+      `).join('');
 
-      const cycleCards = cycleData
-        .map(
-          cycle => `
-            <article class="cycle-card searchable-row">
-              <h3>${escapeHTML(cycle.title)}</h3>
-              <p><strong>มุมเพลาข้อเหวี่ยง:</strong> ${escapeHTML(cycle.angle)}</p>
-              <p><strong>ลูกสูบ:</strong> ${escapeHTML(cycle.piston)}</p>
-              <p><strong>วาล์วไอดี:</strong> ${escapeHTML(cycle.intake)}</p>
-              <p><strong>วาล์วไอเสีย:</strong> ${escapeHTML(cycle.exhaust)}</p>
-              <p><strong>เหตุการณ์:</strong> ${escapeHTML(cycle.event)}</p>
-              <p><strong>ผลลัพธ์:</strong> ${escapeHTML(cycle.result)}</p>
-            </article>
-          `
-        )
-        .join("");
-
-      const cycleSection = `
-        <section
-          id="four-stroke"
-          class="section searchable-section"
-          data-title="10. วัฏจักรการทำงาน 4 จังหวะ"
-        >
+      html += `
+        <section id="four-stroke" class="section searchable-section" data-title="10. วัฏจักร 4 จังหวะ">
           <div class="section-heading">
             <div>
               <h2>10. วัฏจักรการทำงาน 4 จังหวะ</h2>
-              <p>
-                เครื่องยนต์ทำงานครบหนึ่งวัฏจักรเมื่อเพลาข้อเหวี่ยงหมุน 2 รอบ
-                หรือ 720° และแต่ละกระบอกสูบเกิดจังหวะกำลังหนึ่งครั้งต่อวัฏจักร
-              </p>
+              <p>ครบรอบการทำงานของเพลาข้อเหวี่ยง 2 รอบ (720°)</p>
             </div>
-            <span class="badge">9 รายการ</span>
+            <span class="badge">4 จังหวะ</span>
           </div>
-
-          <div class="flow">
-            <span class="flow-step">ดูด</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step">อัด</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step">กำลัง</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step">คาย</span>
-          </div>
-
-          <div class="cycle-grid">
-            ${cycleCards}
-          </div>
-
-          <h3>ประเด็นทางเทคนิคเพิ่มเติม</h3>
-          ${createTable(["ประเด็น", "รายละเอียด"], cycleNotes)}
+          <div class="cycle-grid">${cycleCards}</div>
         </section>
       `;
 
-      contentSections.innerHTML = regularSections + cycleSection;
-    }
-
-    function normalizeText(value) {
-      return String(value || "")
-        .toLocaleLowerCase("th")
-        .replace(/\s+/g, " ")
-        .trim();
+      contentSections.innerHTML = html;
     }
 
     function filterContent() {
-      const query = normalizeText(searchInput.value);
-      const allSections = document.querySelectorAll(".searchable-section");
-      let totalVisibleRows = 0;
-
-      allSections.forEach(section => {
-        const rows = section.querySelectorAll(".searchable-row");
-        const sectionTitle = normalizeText(section.dataset.title);
-        let visibleRows = 0;
-
-        rows.forEach(row => {
-          const rowText = normalizeText(row.textContent);
-          const matched =
-            query === "" ||
-            rowText.includes(query) ||
-            sectionTitle.includes(query);
-
-          row.style.display = matched ? "" : "none";
-
-          if (matched) {
-            visibleRows++;
-            totalVisibleRows++;
-          }
+      const q = searchInput.value.toLowerCase().trim();
+      let total = 0;
+      document.querySelectorAll(".searchable-section").forEach(sec => {
+        let matchCount = 0;
+        sec.querySelectorAll(".searchable-row").forEach(row => {
+          let visible = q === "" || row.textContent.toLowerCase().includes(q);
+          row.style.display = visible ? "" : "none";
+          if (visible) matchCount++;
         });
-
-        section.style.display = visibleRows > 0 ? "" : "none";
+        sec.style.display = matchCount > 0 ? "" : "none";
+        total += matchCount;
       });
-
-      noResults.style.display =
-        query !== "" && totalVisibleRows === 0 ? "block" : "none";
-    }
-
-    function clearSearchField() {
-      searchInput.value = "";
-      filterContent();
-      searchInput.focus();
-    }
-
-    function applySavedTheme() {
-      const savedTheme = localStorage.getItem("learning-theme");
-
-      if (savedTheme === "dark") {
-        document.body.classList.add("dark");
-        themeButton.textContent = "โหมดสว่าง";
-      }
-    }
-
-    function toggleTheme() {
-      document.body.classList.toggle("dark");
-      const darkEnabled = document.body.classList.contains("dark");
-
-      themeButton.textContent = darkEnabled ? "โหมดสว่าง" : "โหมดมืด";
-      localStorage.setItem("learning-theme", darkEnabled ? "dark" : "light");
+      noResults.style.display = q !== "" && total === 0 ? "block" : "none";
     }
 
     renderSections();
-    applySavedTheme();
-
     searchInput.addEventListener("input", filterContent);
-    clearSearch.addEventListener("click", clearSearchField);
-    themeButton.addEventListener("click", toggleTheme);
-    printButton.addEventListener("click", () => window.print());
-
-    window.addEventListener("scroll", () => {
-      backToTop.style.display = window.scrollY > 600 ? "block" : "none";
-    });
-
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+    clearSearch.addEventListener("click", () => { searchInput.value = ""; filterContent(); });
+    themeButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      themeButton.textContent = document.body.classList.contains("dark") ? "โหมดสว่าง" : "โหมดมืด";
     });
   </script>
 </body>
